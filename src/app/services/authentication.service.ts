@@ -56,7 +56,7 @@ export class AuthenticationService {
     return this.token;
   }
 
-  isLoggedIn(): boolean {
+  isUserLoggedIn(): boolean {
     this.loadToken();
     const decodedToken = this.jwtHelper.decodeToken(this.token);
     const username = decodedToken?.sub;
